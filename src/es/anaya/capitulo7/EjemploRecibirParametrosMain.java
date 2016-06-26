@@ -1,6 +1,5 @@
 package es.anaya.capitulo7;
 
-import java.util.Scanner;
 public class EjemploRecibirParametrosMain {
 
 	public static void main(String[] args) {
@@ -13,7 +12,7 @@ public class EjemploRecibirParametrosMain {
 		int multiplicacion= claseEjemplo.doMultiplicacion(operando1,operando2);
 		System.out.println(multiplicacion);
 		System.out.println("intro  numero");
-		System.out.println( in.nextInt()); 
+		
 		
 		
 	}
