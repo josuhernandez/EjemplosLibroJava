@@ -18,7 +18,7 @@ public class CajaRegistradora1 {
 		 	float precio = 1_326.24f;
 		 	float cambio;*/
 
-		float dineroPagado = 5_000.5f;
+		float dineroPagado = 5044.5f;
 		float precio = 500f;
 		float cambio;
 
