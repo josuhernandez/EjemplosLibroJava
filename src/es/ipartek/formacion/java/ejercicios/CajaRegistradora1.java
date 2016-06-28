@@ -38,7 +38,7 @@ public class CajaRegistradora1 {
 		int vuelta[] = new int[12];
 
 		cambio = dineroPagado - precio;
-		float cambio1 = cambio;
+		float cambio1 = cambio;                          //redefinir variable cambio para conservar valor
 
 		// Calcular el número de billetes de cada tipo a devolver
 		
