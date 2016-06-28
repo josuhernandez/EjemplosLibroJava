@@ -11,7 +11,17 @@ package es.ipartek.formacion.java.ejercicios;
  * 
  */
 
+
 public class CajaRegistradora2 {
+	
+
+
+	public CajaRegistradora2() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 
 	public static void main(String[] args) {
 	

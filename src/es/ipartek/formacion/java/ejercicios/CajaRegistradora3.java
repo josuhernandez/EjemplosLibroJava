@@ -5,8 +5,6 @@ package es.ipartek.formacion.java.ejercicios;
  * @author JosuHernandez <br>
  *         Clase ejecutable que calcula las vueltas optimas de una compra,<br>
  *         dando el menor numero de billetes y monedas.<br>
- *         La compra será de un valor de 1.326,24€ y se paga con cuatro billetes
- *         de 500€.<br>
  * 
  */
 
@@ -24,21 +22,29 @@ public class CajaRegistradora3 {
 	 * <li>etc...</li>
 	 * </ul>
 	 */
-	final float[] BILLETES_MONEDAS = { 50f, 20f, 10f, 5f, 2f, 1f, 0.50f, 0.20f, 0.10f, 0.05f, 0.02f, 0.01f };
+	
+	private float precio;
+	private float dineroPagado;
+	int[] vuelta;
+	public static final float[] BILLETES_MONEDAS = { 50f, 20f, 10f, 5f, 2f, 1f, 0.50f, 0.20f, 0.10f, 0.05f, 0.02f, 0.01f };
 	//float cambio;
-	float miCambio;
+	//float miCambio;
 	
+	//CONSTRUCTOR
+	public CajaRegistradora3(float precio, float dineroPagado) {
+		super();
+		this.precio = precio;
+		this.dineroPagado = dineroPagado;
+		this.vuelta = new int[BILLETES_MONEDAS.length];
+	}
 
-	
 	// CREACIÓN DE METODOS
 	/**
 	 * Método que devuelve la diferencia entre el dinero pagado y el precio del
 	 * producto.<br>
 	 * 
-	 * @param dineroPagado
-	 *            {@code float} dinero que pagamos en €.<br>
-	 * @param precio
-	 *            {@code float} dinero que cuesta el producto en €.<br>
+	 * @param dineroPagado {@code float} dinero que pagamos en €.<br>
+	 * @param precio {@code float} dinero que cuesta el producto en €.<br>
 	 * @return cambio {@code float} la diferencia entre el dinero pagado y el precio del producto
 	 */
 
@@ -71,13 +77,12 @@ public class CajaRegistradora3 {
 	 * 	</ul>
 	 */
 	private static int[] calcularVueltasOptimas(float cambio) {
-		int vueltas[] = new int[12];
-		//this.cambio = cambio;
+
 
 		for (int i = 0; i < BILLETES_MONEDAS.length; i++) {
 			if (cambio > BILLETES_MONEDAS[i]) {
 				int cociente = (int) (cambio / BILLETES_MONEDAS[i]);
-				vueltas[i] = cociente;
+				this.vuelta[i] = cociente;
 				this.cambio = this.cambio - cociente * BILLETES_MONEDAS[i];
 			} else if (this.cambio == BILLETES_MONEDAS[i]) {
 				vueltas[i] = 1;

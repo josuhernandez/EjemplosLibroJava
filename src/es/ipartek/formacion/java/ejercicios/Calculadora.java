@@ -107,36 +107,6 @@ public class Calculadora {
 		calc.calcular(10f, 0.6f);
 		calc.imprimirVueltas();
 
-		/*
-		 * float saldo = 2000; float pagado = 1326.24f; float vueltas = saldo -
-		 * pagado;
-		 * 
-		 * System.out.println("Nos devuelven " + vueltas + " Euros");
-		 * System.out.println("En " + (int) vueltas / 50 + " Billetes de 50");
-		 * vueltas %= 50; System.out.println("En " + (int) vueltas / 20 +
-		 * " Billetes de 20"); vueltas %= 20; System.out.println("En " + (int)
-		 * vueltas / 10 + " Billetes de 10"); vueltas %= 10; System.out.println(
-		 * "En " + (int) vueltas / 5 + " Billetes de 5"); vueltas %= 5;
-		 * System.out.println("En " + (int) vueltas / 2 + " Monedas de 2 Euros"
-		 * ); vueltas %= 2; System.out.println("En " + (int) vueltas / 1 +
-		 * " Monedas de 1 Euro"); vueltas %= 1;
-		 * 
-		 * //multiplicamos * 100 para trabajar con centimos vueltas *= 100;
-		 * System.out.println("En " + (int) (vueltas / 50) +
-		 * " Monedas de 50 Centimos"); vueltas %= 50; System.out.println("En " +
-		 * (int) (vueltas / 20) + " Monedas de 20 Centimos"); vueltas %= 20;
-		 * 
-		 * System.out.println("En " + (int) vueltas / 10 +
-		 * " Monedas de 10 Centimos"); vueltas %= 10;
-		 * 
-		 * System.out .println("En " + (int) vueltas / 5 +
-		 * " Monedas de 5 Centimos"); vueltas %= 5;
-		 * 
-		 * System.out .println("En " + (int) vueltas / 2 +
-		 * " Monedas de 2 Centimos"); vueltas %= 2;
-		 * 
-		 * System.out .println("En " + (int) vueltas / 1 +
-		 * " Monedas de 1 Centimos");
-		 */
+
 	}
 }

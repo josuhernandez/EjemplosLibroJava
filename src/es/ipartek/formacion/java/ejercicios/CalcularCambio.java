@@ -2,10 +2,12 @@ package es.ipartek.formacion.java.ejercicios;
 
 public class CalcularCambio {
 	
+	//*************************************************************************************
+	//DEFINICIÓN DE VARIABLES
 	
 	private float dineroPagado;
 	private float precio;
-	private float cambio;
+
 	/**
 	 * Array {@code float} con tipos de Monedas y Billetes
 	 * <ul>
@@ -20,26 +22,17 @@ public class CalcularCambio {
 	final float[] BILLETES_MONEDAS = { 50f, 20f, 10f, 5f, 2f, 1f, 0.50f, 0.20f, 0.10f, 0.05f, 0.02f, 0.01f };
 	int vuelta[] = new int[12];
 	
-	
+	//*************************************************************************************	
 	//CONSTRUCTOR
-	public CalcularCambio(float dineroPagado, float precio) {
+	public CalcularCambio() {
 		
 		super();
-		this.dineroPagado = dineroPagado;
-		this.precio = precio;
-		this.cambio = dineroPagado - precio;
+		this.dineroPagado = 0;
+		this.precio = 0;
+		this.vuelta = new int[BILLETES_MONEDAS.length];
 	}
 
 	
-	public float getCambio() {
-		return cambio;
-	}
-
-
-	public void setCambio(float cambio) {
-		this.cambio = cambio;
-	}
-
 
 	public float getDineroPagado() {
 		return dineroPagado;
@@ -53,35 +46,51 @@ public class CalcularCambio {
 		return precio;
 	}
 
+	public int[] getVuelta() {
+		
+		return vuelta;
+	}
+
+
+	public void setVuelta(int[] vuelta) {
+		this.vuelta = vuelta;
+	}
+
+
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
 	
+	//*************************************************************************************	
+	//METODOS
 	
 	public void calcularVueltasOptimas(){
 		
-		if (this.cambio < 0) {
+		float cambio = this.dineroPagado - this.precio;
+		if (cambio < 0) {
 			System.out.println("No has pagado lo suficiente.");
 			System.out.println("Te falta por pagar " + cambio * -1 + "€");
 		} else {
 			for (int i = 0; i < BILLETES_MONEDAS.length; i++) {
-				if (this.cambio > BILLETES_MONEDAS[i]) {
+				if (cambio > BILLETES_MONEDAS[i]) {
 					int cociente = (int) (this.cambio / BILLETES_MONEDAS[i]);
 					vuelta[i] = cociente;
-					this.cambio = this.cambio - cociente * BILLETES_MONEDAS[i];
-				} else if (this.cambio == BILLETES_MONEDAS[i]) {
+					cambio = cambio - cociente * BILLETES_MONEDAS[i];
+				} 
+				
+				//No es necesario comprobar los siguientes pasos
+				/*else if (cambio == BILLETES_MONEDAS[i]) {
 					vuelta[i] = 1;
 					break;
 				} else
-					vuelta[i] = 0;
+					vuelta[i] = 0;*/
 			}
 		}
 		System.out.println(vuelta);
-		//return vuelta;
 	}
 	
 	public void sacarResultadosPorPantalla(){
-		if (this.cambio > 0) {
+		if (cambio > 0) {
 			System.out.println("Las mejores vueltas de " + cambio + "€ es en:");
 			System.out.println();
 
@@ -98,6 +107,17 @@ public class CalcularCambio {
 
 			}
 		}
+	}
+	
+	//*************************************************************************************
+	//METODO MAIN
+	
+	public static void main(String[] args) {
+		
+		CalcularCambio caja = new CalcularCambio();
+		caja.setPrecio(2000f);
+		caja.setPrecio(1326.24f);
+		caja.ge
 	}
 	
 

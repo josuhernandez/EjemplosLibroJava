@@ -18,9 +18,11 @@ public class CajaRegistradora1 {
 		 	float precio = 1_326.24f;
 		 	float cambio;*/
 
-		float dineroPagado = 5044.5f;
-		float precio = 500f;
+		float dineroPagado = 100f;
+		float precio = 50.23f;
 		float cambio;
+	
+		
 
 		/**
 		 * Array {@code float} con tipos de Monedas y Billetes
@@ -62,7 +64,7 @@ public class CajaRegistradora1 {
 
 		// Sacar por pantalla los resultados
 
-		if (cambio > 0) {
+		if (cambio >= 0) {
 			System.out.println("Las mejores vueltas de " + cambio + "€ es en:");
 			System.out.println();
 
