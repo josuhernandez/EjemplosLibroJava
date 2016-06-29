@@ -32,7 +32,9 @@ public class CalcularCambio {
 		this.vuelta = new int[BILLETES_MONEDAS.length];
 	}
 
-	
+
+	//*************************************************************************************	
+	//GET and SET
 
 	public float getDineroPagado() {
 		return dineroPagado;
@@ -73,7 +75,7 @@ public class CalcularCambio {
 		} else {
 			for (int i = 0; i < BILLETES_MONEDAS.length; i++) {
 				if (cambio > BILLETES_MONEDAS[i]) {
-					int cociente = (int) (this.cambio / BILLETES_MONEDAS[i]);
+					int cociente = (int) (cambio / BILLETES_MONEDAS[i]);
 					vuelta[i] = cociente;
 					cambio = cambio - cociente * BILLETES_MONEDAS[i];
 				} 
@@ -86,10 +88,11 @@ public class CalcularCambio {
 					vuelta[i] = 0;*/
 			}
 		}
-		System.out.println(vuelta);
+
 	}
 	
 	public void sacarResultadosPorPantalla(){
+		float cambio = this.dineroPagado - this.precio;
 		if (cambio > 0) {
 			System.out.println("Las mejores vueltas de " + cambio + "€ es en:");
 			System.out.println();
@@ -115,9 +118,10 @@ public class CalcularCambio {
 	public static void main(String[] args) {
 		
 		CalcularCambio caja = new CalcularCambio();
-		caja.setPrecio(2000f);
+		caja.setDineroPagado(2000f);
 		caja.setPrecio(1326.24f);
-		caja.ge
+		caja.calcularVueltasOptimas();
+		caja.sacarResultadosPorPantalla();
 	}
 	
 
