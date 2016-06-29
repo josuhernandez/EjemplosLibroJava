@@ -7,6 +7,7 @@ package es.ipartek.formacion.java.ejercicios;
  *         dando el menor numero de billetes y monedas.<br>
  *         La compra será de un valor de 1.326,24€ y se paga con cuatro billetes
  *         de 500€.<br>
+ *         NO VALE YA QUE NO UTILIZA CLASES Y ESTÁ HECHA A CAPON AUNQUE FUNCIONA
  * 
  */
 

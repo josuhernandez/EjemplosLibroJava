@@ -66,6 +66,25 @@ public class CalcularCambio {
 	//*************************************************************************************	
 	//METODOS
 	
+	/**
+	 * Metodo para Calcular el número de billetes de cada tipo a devolver
+	 * @param cambio {@code float} la diferencia entre el dinero pagado y el precio del producto
+	 * @return vueltas {@code int[]}  contiene el número de billetes/monedas de cada tipo
+	 * 	<ul>		
+	 * 	<li>vueltas[0]= nº de billetes de 50€</li>
+	 * 	<li>vueltas[1]= nº de billetes de 20€</li>
+	 * 	<li>vueltas[2]= nº de billetes de 10€</li>
+	 *  <li>vueltas[3]= nº de billetes de 5€</li>
+	 *  <li>vueltas[4]= nº de billetes de 2€</li>
+	 *  <li>vueltas[5]= nº de monedas de 1€</li>
+	 *  <li>vueltas[6]= nº de monedas de 0,50€</li>
+	 *  <li>vueltas[7]= nº de monedas de 0,20€</li>
+	 *  <li>vueltas[8]= nº de monedas de 0,10€</li>
+	 *  <li>vueltas[9]= nº de monedas de 0,05€</li>
+	 *  <li>vueltas[10]= nº de monedas de 0,02€</li>
+	 *  <li>vueltas[11]= nº de monedas de 0,01€</li>
+	 * 	</ul>
+	 */
 	public void calcularVueltasOptimas(){
 		
 		float cambio = this.dineroPagado - this.precio;
