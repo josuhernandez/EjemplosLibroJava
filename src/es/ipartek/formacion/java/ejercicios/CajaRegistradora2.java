@@ -1,6 +1,6 @@
 package es.ipartek.formacion.java.ejercicios;
 
-public class CalcularCambio {
+public class CajaRegistradora2 {
 	
 	//*************************************************************************************
 	//DEFINICIÓN DE VARIABLES
@@ -24,7 +24,7 @@ public class CalcularCambio {
 	
 	//*************************************************************************************	
 	//CONSTRUCTOR
-	public CalcularCambio() {
+	public CajaRegistradora2() {
 		
 		super();
 		this.dineroPagado = 0;
@@ -136,7 +136,7 @@ public class CalcularCambio {
 	
 	public static void main(String[] args) {
 		
-		CalcularCambio caja = new CalcularCambio();
+		CajaRegistradora2 caja = new CajaRegistradora2();
 		caja.setDineroPagado(2000f);
 		caja.setPrecio(1326.24f);
 		caja.calcularVueltasOptimas();
